@@ -1,0 +1,147 @@
+/* -------------------- Layout geral -------------------- */
+#pane-helipep .card { 
+  margin: 12px auto;
+  max-width: 1100px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+}
+#pane-helipep .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin: 8px 0; }
+#pane-helipep .img-wrap { margin-top: 10px; }
+#pane-helipep .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+#pane-helipep .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(180px, 1fr)); gap: 12px; }
+
+#pane-helipep textarea,
+#pane-helipep input[type="text"],
+#pane-helipep input[type="number"],
+#pane-helipep select {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+#pane-helipep input[type="color"] {
+  width: 48px; height: 32px; padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  vertical-align: middle;
+}
+
+#pane-helipep label {
+  display: block;
+  font-size: 0.94rem;
+  color: var(--muted);
+  margin: 6px 0 4px;
+}
+
+#pane-helipep details summary { cursor: pointer; font-weight: 600; }
+#pane-helipep .refs { margin: 8px 0 0; font-size: .95rem; }
+
+#pane-helipep .section-title { 
+  font-weight: 700; 
+  letter-spacing: .2px; 
+  margin: 8px 0 6px; 
+}
+
+#pane-helipep .muted { color: var(--muted); }
+
+/* -------------------- Responsividade -------------------- */
+@media (max-width: 1000px) {
+  #pane-helipep .grid-2 { grid-template-columns: 1fr; }
+  #pane-helipep .grid-3 { grid-template-columns: repeat(2, minmax(160px, 1fr)); }
+}
+@media (max-width: 640px) {
+  #pane-helipep .grid-3 { grid-template-columns: 1fr; }
+}
+
+/* -------------------- Cards das ferramentas -------------------- */
+.tool-card {
+  display: block;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  text-decoration: none;
+  color: inherit;
+  transition: transform .08s ease, box-shadow .08s ease;
+}
+.tool-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,.06);
+}
+.tool-card h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  line-height: 1.3;
+}
+.tool-card h3 strong { font-weight: 600; }
+.tool-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* -------------------- BotÃĩes no estilo QuantyPep -------------------- */
+#pane-helipep button,
+#pane-helipep a.btn,
+#pane-helipep .btn,
+#pane-helipep label.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #7CFC00 !important;  /* Verde QuantyPep */
+  color: #000 !important;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+#pane-helipep button:hover,
+#pane-helipep a.btn:hover,
+#pane-helipep .btn:hover,
+#pane-helipep label.btn:hover {
+  background-color: #66cc00 !important;
+}
+
+#pane-helipep button:active,
+#pane-helipep a.btn:active,
+#pane-helipep .btn:active,
+#pane-helipep label.btn:active {
+  transform: scale(0.97);
+}
+
+/* -------------------- Seletor de arquivo em portuguÃĒs -------------------- */
+#pane-helipep .file-pt-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#pane-helipep .file-pt-input {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
+#pane-helipep .file-pt-name {
+  font-size: 0.95rem;
+  color: #1f2937;
+}
